@@ -1,0 +1,88 @@
+{
+ "config": {
+  "vertices": 1600,
+  "triangles": 3042,
+  "landmarks": 72,
+  "blendshapes": 16,
+  "train_frames": 24000,
+  "test_frames": 4800
+ },
+ "cleaning": {
+  "raw_rmse_mm": 18.8384,
+  "no_outlier_rejection_rmse_mm": 2.6658,
+  "cleaned_rmse_mm": 1.2556,
+  "outlier_recall": 1.0,
+  "outlier_precision": 1.0,
+  "missing_samples_filled": 20967,
+  "frames_per_s": 9038.6924
+ },
+ "train": {
+  "seconds": 25.8909,
+  "epochs": 40,
+  "params": 125456,
+  "final": {
+   "epoch": 40,
+   "train_mse": 0.0037,
+   "val_mse": 0.0073
+  }
+ },
+ "eval": {
+  "mlp": {
+   "weight_mae": 0.0596,
+   "mean_mm": 0.2918,
+   "p95_mm": 1.0336,
+   "max_mm": 5.8974,
+   "artist_holdout_mean_mm": 0.1727,
+   "artist_holdout_weight_mae": 0.03
+  },
+  "linear_lsq": {
+   "weight_mae": 0.0941,
+   "mean_mm": 0.4026,
+   "p95_mm": 1.4372,
+   "max_mm": 10.5425,
+   "artist_holdout_mean_mm": 0.0166,
+   "artist_holdout_weight_mae": 0.0036
+  },
+  "mlp_uncleaned_input": {
+   "weight_mae": 0.0828,
+   "mean_mm": 0.4547,
+   "p95_mm": 1.7292,
+   "max_mm": 16.884
+  },
+  "mlp_per_shape_mae": {
+   "jawOpen": 0.0213,
+   "browInnerUp_L": 0.0591,
+   "browInnerUp_R": 0.0594,
+   "browDown_L": 0.0577,
+   "browDown_R": 0.0614,
+   "eyeBlink_L": 0.0449,
+   "eyeBlink_R": 0.0449,
+   "mouthSmile_L": 0.0326,
+   "mouthSmile_R": 0.0364,
+   "mouthFrown_L": 0.0606,
+   "mouthFrown_R": 0.0631,
+   "cheekPuff_L": 0.0546,
+   "cheekPuff_R": 0.0613,
+   "mouthPucker": 0.0882,
+   "mouthFunnel": 0.1353,
+   "noseSneer": 0.0729
+  }
+ },
+ "inference": {
+  "float64": {
+   "batch_frames_per_s": 120405.1144,
+   "single_frame_us": 91.6018
+  },
+  "float32": {
+   "batch_frames_per_s": 282266.9195,
+   "single_frame_us": 58.4939
+  },
+  "linear_lsq_frames_per_s": 3942.4147
+ },
+ "usd": {
+  "frames": 120,
+  "blendshapes": 16,
+  "sparse_offsets": 9106,
+  "dense_offsets": 25600
+ }
+}
